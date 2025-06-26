@@ -28,7 +28,7 @@ let financeData = [
 		date: "2025-01-16",
 		amount: 100000,
 		type: "income",
-		description: "Bonus proyek",
+		description: "Bonus project",
 		createdAt: "2025-01-16T14:00:00Z",
 	},
 ];
@@ -98,36 +98,5 @@ export const financeAPI = {
 		});
 
 		return result;
-	},
-
-	// Mendapatkan ringkasan per bulan
-	getMonthlySummary: () => {
-		const monthly = {};
-
-		financeData.forEach((item) => {
-			const monthKey = item.date.substring(0, 7); // YYYY-MM
-
-			if (!monthly[monthKey]) {
-				monthly[monthKey] = {
-					month: monthKey,
-					income: 0,
-					expense: 0,
-					balance: 0,
-				};
-			}
-
-			if (item.type === "income") {
-				monthly[monthKey].income += item.amount;
-			} else {
-				monthly[monthKey].expense += item.amount;
-			}
-
-			monthly[monthKey].balance =
-				monthly[monthKey].income - monthly[monthKey].expense;
-		});
-
-		return Object.values(monthly).sort((a, b) =>
-			b.month.localeCompare(a.month)
-		);
 	},
 };

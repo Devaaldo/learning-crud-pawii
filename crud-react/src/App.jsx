@@ -3,9 +3,9 @@ import { Outlet, NavLink } from "react-router";
 function App() {
 	return (
 		<>
-			<nav className="navbar navbar-expand-lg bg-success" data-bs-theme="dark">
+			<nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
 				<div className="container-fluid">
-					<span className="navbar-brand">💰 Finance Tracker</span>
+					<span className="navbar-brand">Finance Tracker</span>
 					<button
 						className="navbar-toggler"
 						type="button"

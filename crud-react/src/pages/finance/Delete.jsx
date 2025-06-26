@@ -76,17 +76,9 @@ function FinanceDelete() {
 				<div className="col-md-8 offset-md-2">
 					<div className="card border-danger">
 						<div className="card-header bg-danger text-white">
-							<h3 className="mb-0">🗑️ Konfirmasi Hapus Transaksi</h3>
+							<h3 className="mb-0">Konfirmasi Hapus Transaksi</h3>
 						</div>
 						<div className="card-body">
-							<div className="alert alert-warning" role="alert">
-								<h5 className="alert-heading">⚠️ Perhatian!</h5>
-								<p className="mb-0">
-									Anda yakin ingin menghapus transaksi ini? Tindakan ini tidak
-									dapat dibatalkan.
-								</p>
-							</div>
-
 							{/* Detail transaksi yang akan dihapus */}
 							<div className="bg-light p-3 rounded">
 								<h5 className="mb-3">Detail Transaksi yang akan dihapus:</h5>
@@ -110,11 +102,11 @@ function FinanceDelete() {
 											<table className="table table-sm table-borderless">
 												<tbody>
 													<tr>
-														<td className="fw-bold">📅 Tanggal:</td>
+														<td className="fw-bold">Tanggal:</td>
 														<td>{financeUtils.formatDate(data.date)}</td>
 													</tr>
 													<tr>
-														<td className="fw-bold">🔄 Tipe:</td>
+														<td className="fw-bold">Tipe:</td>
 														<td>
 															<span
 																className={`badge bg-${financeUtils.getTransactionColor(
@@ -129,11 +121,11 @@ function FinanceDelete() {
 														</td>
 													</tr>
 													<tr>
-														<td className="fw-bold">📝 Deskripsi:</td>
+														<td className="fw-bold">Deskripsi:</td>
 														<td>{data.description}</td>
 													</tr>
 													<tr>
-														<td className="fw-bold">🆔 ID:</td>
+														<td className="fw-bold">ID:</td>
 														<td>#{data.id}</td>
 													</tr>
 												</tbody>
@@ -147,7 +139,7 @@ function FinanceDelete() {
 							<form onSubmit={deleteData} className="mt-4">
 								<div className="d-flex justify-content-between">
 									<Link to=".." className="btn btn-secondary">
-										❌ Batal
+										Batal
 									</Link>
 									<button
 										type="submit"
@@ -163,7 +155,7 @@ function FinanceDelete() {
 												Menghapus...
 											</>
 										) : (
-											<>🗑️ Ya, Hapus Transaksi</>
+											<>Ya, Hapus Transaksi</>
 										)}
 									</button>
 								</div>
@@ -174,7 +166,7 @@ function FinanceDelete() {
 					{/* Impact Information */}
 					<div className="card mt-3 border-info">
 						<div className="card-header bg-info text-white">
-							<h6 className="mb-0">📊 Dampak Penghapusan</h6>
+							<h6 className="mb-0">Dampak Penghapusan</h6>
 						</div>
 						<div className="card-body">
 							<p className="mb-2">

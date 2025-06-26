@@ -139,35 +139,13 @@ function FinanceView() {
 								<div>
 									<Link
 										to={`../edit/${data.id}`}
-										className="btn btn-warning me-2"
+										className="btn btn-primary me-2"
 									>
 										Edit
 									</Link>
-									<Link to={`../delete/${data.id}`} className="btn btn-danger">
+									<Link to={`../delete/${data.id}`} className="btn btn-primary">
 										Hapus
 									</Link>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					{/* Additional Information Card */}
-					<div className="card mt-3">
-						<div className="card-header">
-							<h5 className="mb-0">ℹInformasi Tambahan</h5>
-						</div>
-						<div className="card-body">
-							<div className="row">
-								<div className="col-md-6">
-									<small className="text-muted">
-										<strong>ID Transaksi:</strong> #{data.id}
-									</small>
-								</div>
-								<div className="col-md-6 text-end">
-									<small className="text-muted">
-										<strong>Format Tanggal:</strong>{" "}
-										{financeUtils.formatDateShort(data.date)}
-									</small>
 								</div>
 							</div>
 						</div>

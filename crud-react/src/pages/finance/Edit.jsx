@@ -105,7 +105,7 @@ function FinanceEdit() {
 				<div className="col-md-8 offset-md-2">
 					<div className="card">
 						<div className="card-header">
-							<h3 className="mb-0">✏️ Edit Transaksi</h3>
+							<h3 className="mb-0">Edit Transaksi</h3>
 						</div>
 						<div className="card-body">
 							{errors.general && (
@@ -118,7 +118,7 @@ function FinanceEdit() {
 								{/* Tanggal */}
 								<div className="mb-3">
 									<label htmlFor="date" className="form-label">
-										📅 Tanggal Transaksi <span className="text-danger">*</span>
+										Tanggal Transaksi <span className="text-danger">*</span>
 									</label>
 									<input
 										type="date"
@@ -138,7 +138,7 @@ function FinanceEdit() {
 								{/* Tipe Transaksi */}
 								<div className="mb-3">
 									<label className="form-label">
-										🔄 Tipe Transaksi <span className="text-danger">*</span>
+										Tipe Transaksi <span className="text-danger">*</span>
 									</label>
 									<div className="row">
 										<div className="col-md-6">
@@ -156,7 +156,7 @@ function FinanceEdit() {
 													className="form-check-label text-success"
 													htmlFor="type-income"
 												>
-													📈 Pemasukan
+													Pemasukan
 												</label>
 											</div>
 										</div>
@@ -175,7 +175,7 @@ function FinanceEdit() {
 													className="form-check-label text-danger"
 													htmlFor="type-expense"
 												>
-													📉 Pengeluaran
+													Pengeluaran
 												</label>
 											</div>
 										</div>
@@ -188,7 +188,7 @@ function FinanceEdit() {
 								{/* Jumlah */}
 								<div className="mb-3">
 									<label htmlFor="amount" className="form-label">
-										💰 Jumlah (Rupiah) <span className="text-danger">*</span>
+										Jumlah (Rupiah) <span className="text-danger">*</span>
 									</label>
 									<div className="input-group">
 										<span className="input-group-text">Rp</span>
@@ -221,7 +221,7 @@ function FinanceEdit() {
 								{/* Deskripsi */}
 								<div className="mb-3">
 									<label htmlFor="description" className="form-label">
-										📝 Deskripsi <span className="text-danger">*</span>
+										Deskripsi <span className="text-danger">*</span>
 									</label>
 									<textarea
 										className={`form-control ${
@@ -243,7 +243,7 @@ function FinanceEdit() {
 								{/* Buttons */}
 								<div className="text-end">
 									<Link to=".." className="btn btn-secondary me-2">
-										❌ Batal
+										Batal
 									</Link>
 									<button
 										type="submit"
@@ -261,7 +261,7 @@ function FinanceEdit() {
 												Menyimpan...
 											</>
 										) : (
-											<>💾 Update Transaksi</>
+											<>Update Transaksi</>
 										)}
 									</button>
 								</div>

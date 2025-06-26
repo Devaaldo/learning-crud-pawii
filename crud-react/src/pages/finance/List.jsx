@@ -31,11 +31,11 @@ function FinanceList() {
 		<div className="container">
 			<div className="row mb-4">
 				<div className="col-md-6">
-					<h1>📋 Daftar Transaksi</h1>
+					<h1>Daftar Transaksi</h1>
 				</div>
 				<div className="col-md-6 text-end">
-					<Link to="add" className="btn btn-success">
-						➕ Tambah Transaksi
+					<Link to="add" className="btn btn-primary">
+						Tambah Transaksi
 					</Link>
 				</div>
 			</div>
@@ -45,7 +45,7 @@ function FinanceList() {
 				<div className="col-md-12">
 					<div className="card">
 						<div className="card-body">
-							<h6 className="card-title">🔍 Filter Transaksi</h6>
+							<h6 className="card-title">Filter Transaksi</h6>
 							<div className="btn-group" role="group">
 								<input
 									type="radio"
@@ -71,7 +71,7 @@ function FinanceList() {
 									onChange={() => setFilter("income")}
 								/>
 								<label
-									className="btn btn-outline-success"
+									className="btn btn-outline-primary"
 									htmlFor="filter-income"
 								>
 									Pemasukan
@@ -86,7 +86,7 @@ function FinanceList() {
 									onChange={() => setFilter("expense")}
 								/>
 								<label
-									className="btn btn-outline-danger"
+									className="btn btn-outline-primary"
 									htmlFor="filter-expense"
 								>
 									Pengeluaran
@@ -114,7 +114,7 @@ function FinanceList() {
 							<div className="card-header">
 								<div className="row">
 									<div className="col-md-6">
-										<h5 className="mb-0">📅 {financeUtils.formatDate(date)}</h5>
+										<h5 className="mb-0">{financeUtils.formatDate(date)}</h5>
 									</div>
 									<div className="col-md-6 text-end">
 										<small className="text-muted">
@@ -179,19 +179,19 @@ function FinanceList() {
 															to={`${transaction.id}`}
 															className="btn btn-sm btn-outline-primary me-1"
 														>
-															👁️ Lihat
+															Lihat
 														</Link>
 														<Link
 															to={`edit/${transaction.id}`}
-															className="btn btn-sm btn-outline-warning me-1"
+															className="btn btn-sm btn-outline-primary me-1"
 														>
-															✏️ Edit
+															Edit
 														</Link>
 														<Link
 															to={`delete/${transaction.id}`}
-															className="btn btn-sm btn-outline-danger"
+															className="btn btn-sm btn-outline-primary"
 														>
-															🗑️ Hapus
+															Hapus
 														</Link>
 													</td>
 												</tr>

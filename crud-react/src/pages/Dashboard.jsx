@@ -31,7 +31,7 @@ function Dashboard() {
 							<p className="card-text">
 								Lihat laporan pemasukan dan pengeluaran per bulan
 							</p>
-							<NavLink to="finance/summary" className="btn btn-info">
+							<NavLink to="finance/summary" className="btn btn-primary">
 								Lihat Ringkasan
 							</NavLink>
 						</div>
@@ -43,7 +43,7 @@ function Dashboard() {
 						<div className="card-body text-center">
 							<h5 className="card-title">Tambah Cepat</h5>
 							<p className="card-text">Tambah transaksi baru dengan cepat</p>
-							<NavLink to="finance/add" className="btn btn-success">
+							<NavLink to="finance/add" className="btn btn-primary">
 								Tambah Transaksi
 							</NavLink>
 						</div>
