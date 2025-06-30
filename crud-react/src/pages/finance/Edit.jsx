@@ -36,7 +36,7 @@ function FinanceEdit() {
 			...data,
 			[field]: value,
 		});
-		// Clear error ketika user mulai mengetik
+		// menghapus pesan error pada field tertentu begitu user mulai mengetik atau mengubah nilai input
 		if (errors[field]) {
 			setErrors({
 				...errors,
@@ -49,7 +49,7 @@ function FinanceEdit() {
 		event.preventDefault();
 		setIsSubmitting(true);
 
-		// Convert amount to number
+		// Ubah ke number
 		const transactionData = {
 			...data,
 			amount: parseFloat(data.amount),

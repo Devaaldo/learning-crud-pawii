@@ -40,7 +40,6 @@ function FinanceList() {
 				</div>
 			</div>
 
-			{/* Filter */}
 			<div className="row mb-4">
 				<div className="col-md-12">
 					<div className="card">
@@ -97,7 +96,7 @@ function FinanceList() {
 				</div>
 			</div>
 
-			{/* Transactions by Date */}
+			{/* Transaksi berdasarkan tanggal */}
 			{Object.keys(groupedData).length === 0 ? (
 				<div className="text-center">
 					<p className="text-muted">Belum ada transaksi</p>
@@ -177,19 +176,19 @@ function FinanceList() {
 													<td>
 														<Link
 															to={`${transaction.id}`}
-															className="btn btn-sm btn-outline-primary me-1"
+															className="btn btn-sm btn-secondary me-1"
 														>
 															Lihat
 														</Link>
 														<Link
 															to={`edit/${transaction.id}`}
-															className="btn btn-sm btn-outline-primary me-1"
+															className="btn btn-sm btn-primary me-1"
 														>
 															Edit
 														</Link>
 														<Link
 															to={`delete/${transaction.id}`}
-															className="btn btn-sm btn-outline-primary"
+															className="btn btn-sm btn-danger"
 														>
 															Hapus
 														</Link>

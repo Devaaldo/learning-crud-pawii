@@ -6,30 +6,15 @@ import { financeUtils } from "../../utils/financeUtils";
 function FinanceView() {
 	const { id } = useParams();
 	const [data, setData] = useState(null);
-	const [isLoading, setIsLoading] = useState(true);
 
 	const loadData = () => {
 		const transaction = financeAPI.getById(id);
 		setData(transaction);
-		setIsLoading(false);
 	};
 
 	useEffect(() => {
 		loadData();
 	}, [id]);
-
-	if (isLoading) {
-		return (
-			<div className="container">
-				<div className="text-center">
-					<div className="spinner-border" role="status">
-						<span className="visually-hidden">Loading...</span>
-					</div>
-					<p className="mt-2">Memuat data...</p>
-				</div>
-			</div>
-		);
-	}
 
 	if (!data) {
 		return (
@@ -67,7 +52,6 @@ function FinanceView() {
 						<div className="card-body">
 							<div className="row">
 								<div className="col-md-12">
-									{/* Jumlah - Display prominently */}
 									<div className="text-center mb-4">
 										<h1
 											className={`display-4 text-${financeUtils.getTransactionColor(
@@ -79,7 +63,6 @@ function FinanceView() {
 										</h1>
 									</div>
 
-									{/* Detail Information */}
 									<div className="table-responsive">
 										<table className="table table-borderless">
 											<tbody>
@@ -133,7 +116,7 @@ function FinanceView() {
 						</div>
 						<div className="card-footer">
 							<div className="d-flex justify-content-between">
-								<Link to=".." className="btn btn-secondary">
+								<Link to=".." className="btn btn-primary">
 									← Kembali ke Daftar
 								</Link>
 								<div>

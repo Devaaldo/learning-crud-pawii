@@ -74,8 +74,8 @@ function FinanceDelete() {
 		<div className="container">
 			<div className="row">
 				<div className="col-md-8 offset-md-2">
-					<div className="card border-danger">
-						<div className="card-header bg-danger text-white">
+					<div className="card border-primary">
+						<div className="card-header bg-primary text-white">
 							<h3 className="mb-0">Konfirmasi Hapus Transaksi</h3>
 						</div>
 						<div className="card-body">
@@ -143,7 +143,7 @@ function FinanceDelete() {
 									</Link>
 									<button
 										type="submit"
-										className="btn btn-danger"
+										className="btn btn-primary"
 										disabled={isDeleting}
 									>
 										{isDeleting ? (
@@ -160,33 +160,6 @@ function FinanceDelete() {
 									</button>
 								</div>
 							</form>
-						</div>
-					</div>
-
-					{/* Impact Information */}
-					<div className="card mt-3 border-info">
-						<div className="card-header bg-info text-white">
-							<h6 className="mb-0">Dampak Penghapusan</h6>
-						</div>
-						<div className="card-body">
-							<p className="mb-2">
-								<strong>Dampak terhadap saldo:</strong>
-							</p>
-							<ul className="mb-0">
-								{data.type === "income" ? (
-									<li>
-										Saldo akan berkurang sebesar{" "}
-										{financeUtils.formatCurrency(data.amount)}
-									</li>
-								) : (
-									<li>
-										Saldo akan bertambah sebesar{" "}
-										{financeUtils.formatCurrency(data.amount)}
-									</li>
-								)}
-								<li>Data akan hilang permanen dari sistem</li>
-								<li>Laporan bulanan akan ter-update secara otomatis</li>
-							</ul>
 						</div>
 					</div>
 				</div>
